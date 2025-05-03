@@ -4,6 +4,7 @@ import "./index.css";
 import App from "./App";
 import StarRating from "./StarRating";
 
+// eslint-disable-next-line no-unused-vars
 function Test() {
   const [movieRating, setMovieRating] = useState(0);
 

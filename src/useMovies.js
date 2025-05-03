@@ -15,7 +15,7 @@ export function useMovies(query) {
           setIsLoading(true);
           setError("");
           const res = await fetch(
-            `http://www.omdbapi.com/?apikey=${KEY}&s=${query}`,
+            `https://www.omdbapi.com/?apikey=${KEY}&s=${query}`,
             // `http://www.omdbapi.com/?apikey=${KEY}&s=${query}`,
             { signal: controller.signal }
           );
@@ -27,7 +27,7 @@ export function useMovies(query) {
           setMovies(data.Search);
           setError("");
         } catch (err) {
-          if (err.name !== "AbortError ") {
+          if (err.name !== "AbortError") {
             console.log(err.message);
             setError(err.message);
           }
